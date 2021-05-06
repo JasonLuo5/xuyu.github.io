@@ -10,16 +10,16 @@
 <title>Score-based generative models - 野生程序员</title>
 
 
-    <meta name="description" content="Following points will be mentioned in this post.  Score matching with Langevin dynamics (SMLD) Denoising diffusion probabilistic modeling (DDPM)  THe unified framework that generalizes previous approa">
+    <meta name="description" content="Following points will be mentioned in this post.  Score matching with Langevin dynamics (SMLD) Denoising diffusion probabilistic modeling (DDPM)  References  arXiv: 2006.09011 arXiv:  THe unified fram">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Score-based generative models">
 <meta property="og:url" content="https://github.com/xuyuluo/posts/27435/index.html">
 <meta property="og:site_name" content="野生程序员">
-<meta property="og:description" content="Following points will be mentioned in this post.  Score matching with Langevin dynamics (SMLD) Denoising diffusion probabilistic modeling (DDPM)  THe unified framework that generalizes previous approa">
+<meta property="og:description" content="Following points will be mentioned in this post.  Score matching with Langevin dynamics (SMLD) Denoising diffusion probabilistic modeling (DDPM)  References  arXiv: 2006.09011 arXiv:  THe unified fram">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://github.com/images/og_image.png">
 <meta property="article:published_time" content="2021-05-06T13:08:24.000Z">
-<meta property="article:modified_time" content="2021-05-06T13:35:36.378Z">
+<meta property="article:modified_time" content="2021-05-06T13:39:06.791Z">
 <meta property="article:author" content="序瑜">
 <meta property="article:tag" content="deep learning">
 <meta property="article:tag" content="generative modeling">
@@ -139,7 +139,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 126 words)
+                    a minute read (About 130 words)
                 </span>
                 
                 
@@ -157,20 +157,20 @@
 <li>Score matching with Langevin dynamics (SMLD)</li>
 <li>Denoising diffusion probabilistic modeling (DDPM)</li>
 </ul>
-<p>THe unified framework that generalizes previous approaches through the lens of stochastic differential equations (SDEs).</p>
+<p>References</p>
+<ul>
+<li>arXiv: 2006.09011</li>
+<li>arXiv:</li>
+</ul>
+<p>THe unified framework that generalizes previous approaches through the lens of stochastic differential equations (SDEs). (arXiv:)</p>
 <a id="more"></a>
+
 <ol>
-<li>
-<p>Perturbing data with SDEs<br>
-$$d\mathbf{x}=\mathbf{f}(\mathbf{x},t)dt+g(t)d\mathbf{w}$$<br>
-We hereafter denote by $p_t(\mathbf{x})$ the probability density of $\mathbf{x}(t)$, and use $p_{st}(\mathbf{x}(t)|\mathbf{x}(s))$ to denote the transition kernel from $\mathbf{x}(s)$ to $\mathbf{x}(t)$.</p>
+<li><p>Perturbing data with SDEs<br>$$d\mathbf{x}=\mathbf{f}(\mathbf{x},t)dt+g(t)d\mathbf{w}$$<br>We hereafter denote by $p_t(\mathbf{x})$ the probability density of $\mathbf{x}(t)$, and use $p_{st}(\mathbf{x}(t)|\mathbf{x}(s))$ to denote the transition kernel from $\mathbf{x}(s)$ to $\mathbf{x}(t)$.</p>
 </li>
-<li>
-<p>Generating samples by reversing the SDE<br>
-$$d\mathbf{x}=[\mathbf{f}(x,t)-g(t)^2\nabla_{\mathbf{x}}\log p_t(\mathbf{x})]dt+g(t)d\mathbf{\bar{w}}$$</p>
+<li><p>Generating samples by reversing the SDE<br>$$d\mathbf{x}=[\mathbf{f}(x,t)-g(t)^2\nabla_{\mathbf{x}}\log p_t(\mathbf{x})]dt+g(t)d\mathbf{\bar{w}}$$</p>
 </li>
-<li>
-<p>Estimate scores for the SDE</p>
+<li><p>Estimate scores for the SDE</p>
 </li>
 </ol>
 
