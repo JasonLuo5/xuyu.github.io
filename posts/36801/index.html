@@ -153,6 +153,7 @@
         <div class="content">
             <p>Context is an analogous to a CPU process. All resources and actions performed within the drive API are encapsulated into a CUDA context, and the system automatically cleans up these resources when the context is destroyed. Simple on the surface, it is, unfortunately, incidentally complex due to early CUDA legacy. So what? We have to deal with that, so, instead of complaining, we’ll see how to tame it.</p>
 <a id="more"></a>
+
 <p>GPU has quite a few of computing cores, and quite a bit of expensive memory. However, since we have huge demands, it is never enough of them. We always need top performance, and these resources are always scarce, no matter how abundant they are. Context managers the life-cycles of typical objects we find in CUDA program.</p>
 <ul>
 <li>memory buffers</li>
@@ -160,9 +161,9 @@
 <li>functions</li>
 <li>streams</li>
 <li>events</li>
-<li>…</li>
+<li>….</li>
 </ul>
-<p>Besides objects such as modules and texture or surface references, each context has its own distinct address space. As a result, <strong>CUdeviceptr</strong> values from different contexts reference different memory locations.</p>
+<p>Besides objects such as modules and texture or surface references, each context has its own distinct address space. As a result, <strong>CUdeviceptr</strong> values from different contexts reference different memory locations. </p>
 <p>Each context isolates the resources within it. For example, the memory created in one context cannot be referenced by a function from another context, even if they are physically located on the same GPU.</p>
 <p>A host thread may have only one device context current at a time. When a context is created with <strong>cuCtxCreate()</strong></p>
 

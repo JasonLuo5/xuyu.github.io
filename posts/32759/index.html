@@ -150,13 +150,12 @@
             
         </h1>
         <div class="content">
-            <p>首先需要了解什么是可迭代量（iterables）。比如创建了一个list，你可以逐一读取其中的每一个元素。</p>
+            <p>首先需要了解什么是可迭代量（iterables）。比如创建了一个list，你可以逐一读取其中的每一个元素。 </p>
 <a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mylist = [x*x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>)]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> mylist:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
 <p>在Python中可以进行</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> ... <span class="keyword">in</span> ...</span><br></pre></td></tr></table></figure>
-<p>操作的还有strings, files等可迭代量。这些可迭代量非常便于读取，但是所有的值都存储在其中，有些时候这并不是我们想要的。<br>
-生成器（generators）是一种仅可以被迭代一次但是不需要存储在内存中的可迭代量。</p>
+<p>操作的还有strings, files等可迭代量。这些可迭代量非常便于读取，但是所有的值都存储在其中，有些时候这并不是我们想要的。<br>生成器（generators）是一种仅可以被迭代一次但是不需要存储在内存中的可迭代量。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mygenerator = (x*x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> mygenerator:</span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
 <p>仅需要用<span style="background-color:#D3D3D3">()</span>代替<span style="background-color:#D3D3D3">[]</span>，但是你没办法再次遍历</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> mygenerator:</span><br><span class="line">    ....</span><br></pre></td></tr></table></figure>
